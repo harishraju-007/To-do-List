@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do list</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+    
+    <div id="divBox">
+        <h1>To-do Lidt</h1>
+    <input id="ip">
+    <button onclick="add()">Add</button>
+    <ul id="container">
+        <!-- <li>Demo <button onclick="deleteItem(event)">delete</button></li> -->
+    </ul>
+    </div>
+    <div></div>
+    
+    <script>
+        var ulContainer = document.getElementById('container');
+
+        function add(){
+            var newLi = document.createElement("li");
+            newLi.innerHTML = ip.value + "<button onclick='deleteItem(event)''>delete</button";
+            ulContainer.append(newLi);
+        }
+        function deleteItem(event){
+            event.target.parentElement.remove();
+        }
+
+    </script>
+</body>
+</html>
